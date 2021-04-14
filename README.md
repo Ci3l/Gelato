@@ -1,2 +1,2 @@
 # Gelato_
-From str to brainf**ck /optimized
+converter from str to brainf**ck 
