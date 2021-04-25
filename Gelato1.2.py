@@ -1,9 +1,9 @@
 from math import *
 from array import array
 minput = input()
-#print(minput)
 uppercase = False
 lowercase = False
+#There's a possibility to put a lowercase text in uppercase by writing !uppercase [your text] you can do the opposite by writing !lowercase [your text]
 if ('!uppercase' in minput) == True :
     minput = minput.replace('!uppercase ', '')
     uppercase = True
@@ -11,31 +11,28 @@ elif ('!lowercase' in minput) == True :
     minput = minput.replace('!lowercase ', '')
     lowercase = True
 minput = list(minput)
-#print("The original list : " + str(minput))
 res = []
+#We pass the elements of the list to ASCII
 for ele in minput:
     res.extend(ord(num) for num in ele)
-#print("The ascii list is : " + str(res))
 inputASCII = res
 i = 0
 code4real = ""
 h = 0
+#If the lowercase or uppercase options were selected they take effect here
 if uppercase == True :
-#    print('test1.0')
     while h < len(inputASCII) :
-#        print('test2.0')
         inputASCIIindex = inputASCII[h]
         if inputASCIIindex  >= 97 and inputASCIIindex  <= 122 :
             inputASCII[h] = inputASCIIindex - 32
         h = h + 1
 elif lowercase == True :
-#    print('test1.1')
     while h < len(inputASCII) :
-#        print('test2.1')
         inputASCIIindex = inputASCII[h]
         if inputASCII[h]  >= 65 and inputASCII[h]  <= 90 :
             inputASCII[h] = inputASCII[h] + 32
         h = h + 1
+#Now for each element of the input list (now in ASCII) we find 5 solutions in BrainFu**k
 while i < len(inputASCII) :
     tempsvalue = 0
     valuetoadd = 0
@@ -45,24 +42,17 @@ while i < len(inputASCII) :
     codeMULTIplus = ""
     codeSQUAREplus = ""
     msqrt = round(sqrt(inputASCII[i]))
-#    print(inputASCII[i])
     if msqrt**2 < inputASCII[i] :
         valuetoadd = inputASCII[i] - msqrt**2
-        #print(inputASCII[i], "->",msqrt**2+valuetoadd)
         if i == 0 :
-            #print(msqrt," ", valuetoadd)
             codeSQUARE +=  ">"  +  "+"*msqrt + "[<" + "+"*msqrt + ">-]<" + "+"*valuetoadd + "."
         else :
-            #print(msqrt, " ", valuetoadd)
             codeSQUARE +=  ">>"  +  "+"*msqrt + "[<" + "+"*msqrt + ">-]<" + "+"*valuetoadd + "."
     elif msqrt**2 > inputASCII[i] :
         valuetoadd = msqrt**2 - inputASCII[i]
-        #print(inputASCII[i], "->",msqrt**2-valuetoadd)
         if i == 0 :
-            #print(msqrt, " ", valuetoadd)
             codeSQUARE +=  ">"  +  "+"*msqrt + "[<" + "+"*msqrt + ">-]<" + "-"*valuetoadd + "."
         else :
-            #print(msqrt, " ", valuetoadd)
             codeSQUARE +=  ">>"  +  "+"*msqrt + "[<" + "+"*msqrt + ">-]<" + "-"*valuetoadd + "."
     else : codeSQUARE +=  ">"  +  "+"*msqrt + "[<" + "+"*msqrt + ">-]<."
     j = 1
@@ -82,7 +72,6 @@ while i < len(inputASCII) :
             mt = float(inputASCII[i])/j
             h = j
             if j*mt == float(inputASCII[i]) :
-                #print(h,"*",mt,"=",inputASCII[i])
                 j += 1
     ordre4shit = [len(codeMULTI),len(codeSQUARE)]
     if i != 0 :
@@ -96,14 +85,11 @@ while i < len(inputASCII) :
             if msqrt**2 < inputASCII[i] :
                 codeSQUAREplus += "-"*testvalue + "[>" + "+"*msqrt + "<-]>" + "+"*valuetoadd +"."
             else :    codeSQUAREplus += "-"*testvalue + "[>" + "+"*msqrt + "<-]>" + "-"*valuetoadd +"."
-#        print(inputASCII[i-1],"+/-",testvalue,"*",msqrt,"+/-",valuetoadd,"=",inputASCII[i],)
         if inputASCII[i-1] > inputASCII[i] :
             tempvalue = inputASCII[i-1] - inputASCII[i]
-            #print(inputASCII[i-1],"-",inputASCII[i],"=",tempvalue)
             codePLUS += "-"*tempvalue + "."
         if inputASCII[i-1] < inputASCII[i] :
             tempvalue = inputASCII[i] - inputASCII[i-1]
-            #print(inputASCII[i-1],"-",inputASCII[i],"=",tempvalue)
             codePLUS += "+"*tempvalue + "."
         if inputASCII[i-1] == inputASCII[i] :
             codePLUS += "."
@@ -140,6 +126,7 @@ while i < len(inputASCII) :
         if multi == tempvalue4 :
             multi1 = h
             codeMULTIplus += ">"+"+"*multi1 + "[<" + "+"*multi + ">-]<."
+#  Now that we have our 5 solutions we try to find the shortest
         ordre4shit.append(len(codeSQUAREplus))
         ordre4shit.append(len(codePLUS))
         ordre4shit.append(len(codeMULTIplus))
@@ -154,11 +141,6 @@ while i < len(inputASCII) :
         code4real += codeMULTIplus
     elif ordre4shit[0] == len(codeSQUAREplus) :
         code4real += codeSQUAREplus
-#    print("codeMULTIplus ->",codeMULTIplus,"---",len(codeMULTIplus))
-#    print("codeMULTI -> ",codeMULTI,"---",len(codeMULTI))
-#    print("codePLUS -> ",codePLUS,"---",len(codePLUS))
-#    print("codeSQUARE -> ",codeSQUARE,"---",len(codeSQUARE))
-#    print("codeSQUAREplus ->",codeSQUAREplus,"---",len(codeSQUAREplus))
-#    print(code4real)
+# Now we have add the shortest solution to the code4real string which is the final code (which is shown at the end)
     i += 1
 print(code4real)
