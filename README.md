@@ -1,9 +1,9 @@
 # GELATO
 
-<img src="images/503825bd3c59fbf4fc8ee2496d15c4ae.jpg" width=300> 
+<img src="images/503825bd3c59fbf4fc8ee2496d15c4ae.jpg" width=300>
 
 ### Description
-Created a translator from a random string input to an optimized Brainfuck code. Actually, my code is made for the Brainfuck code to take the less space possible but I would love to receive advices for the code to be more efficient. 
+Created a translator from a random string input to an optimized Brainfuck code. Actually, my code is made for the Brainfuck code to take the less space possible but I would love to receive advices for the code to be more efficient.
 
 ### Use Project
 The only package used by my code is the math package, so be careful to have it. If you don't, install it with the command line below (in a command prompt window).
@@ -13,6 +13,12 @@ pip install python-math
 Now you can launch it by executing the command line below in the folder where the file is stored (for that you'll need to have python in PATH, if you don't, go check this [link](https://www.educative.io/edpresso/how-to-add-python-to-path-variable-in-windows)).
 ```
 python Gelato.py
+```
+If you want you can pass all you text in uppercase by adding !uppercase in front of your string same for lowercase (!lowercase).
+
+If you need it here's the syntax of the main function :
+```
+Gelato(input, uppercase = False, lowercase = False)
 ```
 
 ### [View Project](https://www.jdoodle.com/embed/v0/3f60)
