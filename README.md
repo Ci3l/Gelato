@@ -18,5 +18,5 @@ If you need it here's the syntax of the main function :
 MindBlower(input, uppercase = False, lowercase = False)
 ```
 
-### [View Project](https://www.jdoodle.com/embed/v0/3f60)
+### [View Project](https://www.jdoodle.com/iembed/v0/ean)
 Unfortunately for now I can't host the python code but you can run it by clicking the link on *View Project* or on this [compiler](https://www.jdoodle.com/python3-programming-online/) by copying and paste my code and add your input in *Stdin Inputs*
