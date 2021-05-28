@@ -1,4 +1,4 @@
-# GELATO
+# MIND BLOWER
 
 <img src="images/503825bd3c59fbf4fc8ee2496d15c4ae.jpg" width=300>
 
