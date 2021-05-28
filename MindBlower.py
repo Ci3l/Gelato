@@ -1,6 +1,6 @@
 from math import *
 from array import array
-def Gelato (minput, uppercase = False, lowercase = False):
+def MindBlower (minput, uppercase = False, lowercase = False):
     #There's a possibility to put a lowercase text in uppercase by writing !uppercase [your text] you can do the opposite by writing !lowercase [your text]
     if ('!uppercase' in minput) == True :
         minput = minput.replace('!uppercase ', '')
@@ -147,8 +147,8 @@ while True :
     minput = input()
     if "!uppercase" in minput == True :
         minput.remove('!uppercase')
-        print(Gelato(minput,False,True))
+        print(MindBlower(minput,False,True))
     elif "!lowercase" in minput == True :
         minput.remove('!lowercase')
-        print(Gelato(minput,True))
-    else : print(Gelato(minput))
+        print(MindBlower(minput,True))
+    else : print(MindBlower(minput))
