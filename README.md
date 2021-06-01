@@ -1,6 +1,6 @@
 # MIND BLOWER
 
-<img src="images/503825bd3c59fbf4fc8ee2496d15c4ae.jpg" width=300>
+<img src="assets/503825bd3c59fbf4fc8ee2496d15c4ae.jpg" width=300>
 
 ### Description
 Created a translator from a random string input to an optimized Brainfuck code. Actually, my code is made for the Brainfuck code to take the less space possible but I would love to receive advices for the code to be more efficient.
