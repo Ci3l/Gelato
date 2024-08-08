@@ -26,9 +26,9 @@ To run the project, ensure Python is installed and properly set up in your PATH.
    git clone https://github.com/Ci3l/TextToBrainfuckTranslator.git
    ```
 2. Navigate into the project directory:
-  ```bash
-  cd TextToBrainfuckTranslator
-  ```
+   ```bash
+   cd TextToBrainfuckTranslator
+   ```
 3. Run the translator:
    ```bash
    python MindBlower.py
@@ -47,10 +47,10 @@ MindBlower(input, uppercase=False, lowercase=False)
 * **'lowercase'** (optional): Set to True to convert input to lowercase.
 
 ### Demo
-Unfortunately, I am unable to host the Python code online. However, you can run the code on (JDoodle)[https://www.jdoodle.com/python3-programming-online] by copying and pasting the code from MindBlower.py and providing your input in _Stdin Inputs_.
+You can try out the Mind Blower translator live at [JDoodle](https://www.jdoodle.com/iembed/v0/ean). Provide your text in _Stdin Inputs_ and see the optimized Brainfuck code generated in real-time.
 
 ### Related Projects
-(Brainfuck2Ascii)[https://github.com/Ci3l/BrainfuckToASCII]: A basic Brainfuck compiler that translates Brainfuck code into ASCII text.
+[Brainfuck2Ascii](https://github.com/Ci3l/BrainfuckToASCII): A basic Brainfuck compiler that translates Brainfuck code into ASCII text.
 
 ### Contributing
 If you’d like to contribute, please follow these guidelines:
