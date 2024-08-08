@@ -1,25 +1,67 @@
-# MIND BLOWER
+# Text to Brainfuck Translator
 
 <img src="assets/503825bd3c59fbf4fc8ee2496d15c4ae.jpg" width=300>
 
-### Description
-Created a translator from a random string input to an optimized Brainfuck code. Actually, my code is made for the Brainfuck code to take the less space possible but I would love to receive advices for the code to be more efficient.
+## Description
 
-### Use Project
-The only package used by my code is the math package.
-You can launch it by executing the command line below in the folder where the file is stored (for that you'll need to have python in PATH, if you don't, go check this [link](https://www.educative.io/edpresso/how-to-add-python-to-path-variable-in-windows)).
-```
-python MindBlower.py
-```
-If you want you can pass all you text in uppercase by adding !uppercase in front of your string same for lowercase (!lowercase).
+**Text to Brainfuck Translator** is a Python-based translator that converts arbitrary text input into optimized Brainfuck code. This project was created to validate my understanding of ASCII encoding and Brainfuck, and to refine my Python programming skills. The goal of this tool is to generate the most compact Brainfuck code possible for any given string.
 
-If you need it here's the syntax of the main function :
-```
-MindBlower(input, uppercase = False, lowercase = False)
-```
+## Features
 
-### [View Project](https://www.jdoodle.com/iembed/v0/ean)
-Unfortunately for now I can't host the python code but you can run it by clicking the link on *View Project* or on this [compiler](https://www.jdoodle.com/python3-programming-online/) by copying and paste my code and add your input in *Stdin Inputs*
+- **Optimized Brainfuck Translation:** Converts input text into Brainfuck code with minimal space usage.
+- **Case Conversion:** Supports uppercase and lowercase text conversions.
+- **Flexible Input:** Handles various input formats and provides options for text case manipulation.
 
-### More
-If you want to check I've made [a very basic compiler for Brainfuck](https://github.com/Ci3l/Brainfuck2Ascii) too.
+## Technologies
+
+- **Programming Language:** Python
+- **Libraries Used:** Standard library modules (`math`, `array`)
+
+## Usage
+
+To run the project, ensure Python is installed and properly set up in your PATH. Follow these steps:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Ci3l/TextToBrainfuckTranslator.git
+   ```
+2. Navigate into the project directory:
+  ```bash
+  cd TextToBrainfuckTranslator
+  ```
+3. Run the translator:
+   ```bash
+   python MindBlower.py
+   ```
+### Command Line Options
+You can modify the input text for case conversion by using the following options:
+* **'!uppercase [your text]'** to convert the text to uppercase before translation.
+* **'!lowercase [your text]'** to convert the text to lowercase before translation.
+
+### Function Syntax
+```python
+MindBlower(input, uppercase=False, lowercase=False)
+```
+* **'input'**: The text to be converted to Brainfuck code.
+* **'uppercase'** (optional): Set to True to convert input to uppercase.
+* **'lowercase'** (optional): Set to True to convert input to lowercase.
+
+### Demo
+Unfortunately, I am unable to host the Python code online. However, you can run the code on (JDoodle)[https://www.jdoodle.com/python3-programming-online] by copying and pasting the code from MindBlower.py and providing your input in _Stdin Inputs_.
+
+### Related Projects
+(Brainfuck2Ascii)[https://github.com/Ci3l/BrainfuckToASCII]: A basic Brainfuck compiler that translates Brainfuck code into ASCII text.
+
+### Contributing
+If you’d like to contribute, please follow these guidelines:
+
+* Fork the repository
+* Create a new branch (**git checkout -b feature/YourFeature**)
+* Commit your changes (**git commit -am 'Add new feature'**)
+* Push to the branch (**git push origin feature/YourFeature**)
+* Open a pull request
+
+### License
+This project is licensed under the EPL 2.0 License - see the LICENSE file for details.
+
+
